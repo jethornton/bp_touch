@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+bp_touch/__init__.py
+bp_touch/mainwindow.py
+bp_touch.egg-info/PKG-INFO
+bp_touch.egg-info/SOURCES.txt
+bp_touch.egg-info/dependency_links.txt
+bp_touch.egg-info/entry_points.txt
+bp_touch.egg-info/requires.txt
+bp_touch.egg-info/top_level.txt

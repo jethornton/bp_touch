@@ -1,0 +1,6 @@
+[gui_scripts]
+bp_touch = bp_touch:main
+
+[qtpyvcp.vcp]
+bp_touch = bp_touch
+
