@@ -259,28 +259,28 @@ border: 5px solid rgb(136, 138, 133);
                  <property name="bottomMargin">
                   <number>5</number>
                  </property>
-                 <item row="0" column="1">
+                 <item row="0" column="2">
                   <widget class="QPushButton" name="navDown">
                    <property name="text">
                     <string>Down</string>
                    </property>
                   </widget>
                  </item>
-                 <item row="0" column="3">
+                 <item row="0" column="4">
                   <widget class="QPushButton" name="navSelect">
                    <property name="text">
                     <string>Select</string>
                    </property>
                   </widget>
                  </item>
-                 <item row="0" column="0">
+                 <item row="0" column="1">
                   <widget class="QPushButton" name="navUp">
                    <property name="text">
                     <string>Up</string>
                    </property>
                   </widget>
                  </item>
-                 <item row="0" column="4">
+                 <item row="0" column="5">
                   <spacer name="horizontalSpacer_2">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
@@ -292,6 +292,13 @@ border: 5px solid rgb(136, 138, 133);
                     </size>
                    </property>
                   </spacer>
+                 </item>
+                 <item row="0" column="0">
+                  <widget class="QPushButton" name="navParent">
+                   <property name="text">
+                    <string>/..</string>
+                   </property>
+                  </widget>
                  </item>
                 </layout>
                </widget>
@@ -1613,8 +1620,8 @@ font: 14pt &quot;DejaVu Sans&quot;;
    <slot>selectPrevious()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>77</x>
-     <y>554</y>
+     <x>192</x>
+     <y>589</y>
     </hint>
     <hint type="destinationlabel">
      <x>335</x>
@@ -1629,8 +1636,8 @@ font: 14pt &quot;DejaVu Sans&quot;;
    <slot>openSelectedItem()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>593</x>
-     <y>554</y>
+     <x>375</x>
+     <y>589</y>
     </hint>
     <hint type="destinationlabel">
      <x>335</x>
@@ -1645,8 +1652,8 @@ font: 14pt &quot;DejaVu Sans&quot;;
    <slot>selectNext()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>163</x>
-     <y>554</y>
+     <x>289</x>
+     <y>589</y>
     </hint>
     <hint type="destinationlabel">
      <x>335</x>
@@ -1661,12 +1668,12 @@ font: 14pt &quot;DejaVu Sans&quot;;
    <slot>clear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>945</x>
-     <y>455</y>
+     <x>979</x>
+     <y>540</y>
     </hint>
     <hint type="destinationlabel">
-     <x>899</x>
-     <y>243</y>
+     <x>979</x>
+     <y>330</y>
     </hint>
    </hints>
   </connection>
@@ -1773,18 +1780,34 @@ font: 14pt &quot;DejaVu Sans&quot;;
    <slot>submit()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>957</x>
-     <y>566</y>
+     <x>736</x>
+     <y>93</y>
     </hint>
     <hint type="destinationlabel">
-     <x>882</x>
-     <y>200</y>
+     <x>693</x>
+     <y>33</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>navParent</sender>
+   <signal>clicked()</signal>
+   <receiver>filesystemtable</receiver>
+   <slot>viewParentDirectory()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>68</x>
+     <y>547</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>66</x>
+     <y>507</y>
     </hint>
    </hints>
   </connection>
  </connections>
  <buttongroups>
-  <buttongroup name="offsetButtonGroup"/>
   <buttongroup name="mdiButtonGroup"/>
+  <buttongroup name="offsetButtonGroup"/>
  </buttongroups>
 </ui>
