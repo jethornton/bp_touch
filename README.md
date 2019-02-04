@@ -8,3 +8,11 @@ To install and be able to edit open a terminal in the bp_touch directory and do
 
 To test with a simulated configuration copy the bp_touch directory from the
 configs directory to your linuxcnc/configs directory.
+
+To update just do a ``git pull`` from the bp_touch directory.
+
+If you get an error about something not being in the filesystemtable then you
+need to update QtPyVCP with
+``pip install git+https://github.com/kcjengr/qtpyvcp.git --upgrade``
+
+![BP Touch QtPyVCP](bp-touch-01.png)
