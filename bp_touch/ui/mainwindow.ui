@@ -356,7 +356,7 @@ font: 14pt &quot;DejaVu Sans&quot;;
 }</string>
                 </property>
                 <property name="title">
-                 <string>Set Current Coordinate Syste Offset</string>
+                 <string>Set Current Coordinate System Offset</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
