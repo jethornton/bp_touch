@@ -288,7 +288,7 @@ font: 14pt &quot;DejaVu Sans&quot;;
           <enum>QTabWidget::South</enum>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="tab">
           <attribute name="title">
@@ -975,7 +975,7 @@ font: 14pt &quot;DejaVu Sans&quot;;
                </widget>
               </item>
               <item row="7" column="4">
-               <widget class="QPushButton" name="pushButton_6">
+               <widget class="QPushButton" name="mdiSendKey">
                 <property name="text">
                  <string>Send</string>
                 </property>
@@ -1539,6 +1539,22 @@ font: 14pt &quot;DejaVu Sans&quot;;
     <hint type="destinationlabel">
      <x>308</x>
      <y>262</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mdiSendKey</sender>
+   <signal>clicked()</signal>
+   <receiver>mdiEntry</receiver>
+   <slot>submit()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>957</x>
+     <y>566</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>882</x>
+     <y>200</y>
     </hint>
    </hints>
   </connection>
