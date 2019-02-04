@@ -1,3 +1,4 @@
+*.pyc
 .htaccess
 css.php
 rpc/
