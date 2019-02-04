@@ -10,3 +10,5 @@ sites/site*/public/theme/
 textpattern/
 HISTORY.txt
 README.txt
+
+*.egg-info

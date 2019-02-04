@@ -23,7 +23,4 @@ setup(
             'bp_touch=bp_touch',
         ],
     },
-    install_requires=[
-       'qtpyvcp>=0.1.4',
-    ],
 )
