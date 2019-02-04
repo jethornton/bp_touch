@@ -63,23 +63,6 @@ font: 14pt &quot;DejaVu Sans&quot;;
        <property name="bottomMargin">
         <number>5</number>
        </property>
-       <item row="0" column="1">
-        <widget class="QTabWidget" name="tabWidget">
-         <property name="tabPosition">
-          <enum>QTabWidget::South</enum>
-         </property>
-         <widget class="QWidget" name="tab">
-          <attribute name="title">
-           <string>Tab 1</string>
-          </attribute>
-         </widget>
-         <widget class="QWidget" name="tab_2">
-          <attribute name="title">
-           <string>Tab 2</string>
-          </attribute>
-         </widget>
-        </widget>
-       </item>
        <item row="0" column="0">
         <widget class="QTabWidget" name="tabWidget_2">
          <property name="tabPosition">
@@ -111,9 +94,6 @@ font: 14pt &quot;DejaVu Sans&quot;;
               <property name="bottomMargin">
                <number>5</number>
               </property>
-              <item row="0" column="0">
-               <widget class="GcodeBackplot" name="gcodebackplot"/>
-              </item>
               <item row="1" column="0">
                <widget class="QFrame" name="gridFrame">
                 <property name="frameShape">
@@ -133,49 +113,49 @@ font: 14pt &quot;DejaVu Sans&quot;;
                   <number>5</number>
                  </property>
                  <item row="0" column="2">
-                  <widget class="QPushButton" name="pushButton_5">
+                  <widget class="QPushButton" name="yView">
                    <property name="text">
                     <string>Y</string>
                    </property>
                   </widget>
                  </item>
                  <item row="0" column="4">
-                  <widget class="QPushButton" name="pushButton_3">
+                  <widget class="QPushButton" name="zoomViewIn">
                    <property name="text">
                     <string>+</string>
                    </property>
                   </widget>
                  </item>
                  <item row="0" column="1">
-                  <widget class="QPushButton" name="pushButton_6">
+                  <widget class="QPushButton" name="xView">
                    <property name="text">
                     <string>X</string>
                    </property>
                   </widget>
                  </item>
                  <item row="0" column="3">
-                  <widget class="QPushButton" name="pushButton_4">
+                  <widget class="QPushButton" name="zView">
                    <property name="text">
                     <string>Z</string>
                    </property>
                   </widget>
                  </item>
                  <item row="0" column="5">
-                  <widget class="QPushButton" name="pushButton_2">
+                  <widget class="QPushButton" name="zoomViewOut">
                    <property name="text">
                     <string>-</string>
                    </property>
                   </widget>
                  </item>
                  <item row="0" column="6">
-                  <widget class="QPushButton" name="pushButton">
+                  <widget class="QPushButton" name="clearView">
                    <property name="text">
                     <string>Clear</string>
                    </property>
                   </widget>
                  </item>
                  <item row="0" column="0">
-                  <widget class="QPushButton" name="pushButton_7">
+                  <widget class="QPushButton" name="pView">
                    <property name="text">
                     <string>P</string>
                    </property>
@@ -184,7 +164,29 @@ font: 14pt &quot;DejaVu Sans&quot;;
                 </layout>
                </widget>
               </item>
+              <item row="0" column="0">
+               <widget class="GcodeBackplot" name="gcodebackplot"/>
+              </item>
              </layout>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="StatusLabel" name="statuslabel">
+             <property name="font">
+              <font>
+               <family>DejaVu Sans</family>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color:rgb(240,240,80)</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::Box</enum>
+             </property>
+             <property name="rules" stdset="0">
+              <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:file&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Loaded File &gt; ' + ch[0].split('/')[-1] if ch[0] else 'No File Loaded'&quot;, &quot;name&quot;: &quot;Current File&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:file&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'background-color: rgb(150, 255, 150);' if ch[0] else 'background-color:rgb(240,240,80)'&quot;, &quot;name&quot;: &quot;Background Color&quot;}]</string>
+             </property>
             </widget>
            </item>
           </layout>
@@ -214,6 +216,12 @@ font: 14pt &quot;DejaVu Sans&quot;;
               </property>
               <item row="0" column="0">
                <widget class="FileSystemTable" name="filesystemtable">
+                <property name="font">
+                 <font>
+                  <family>DejaVu Sans</family>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
                 <property name="hiddenColumns" stdset="0">
                  <string>2</string>
                 </property>
@@ -264,7 +272,7 @@ font: 14pt &quot;DejaVu Sans&quot;;
                    </property>
                   </widget>
                  </item>
-                 <item row="0" column="2">
+                 <item row="0" column="4">
                   <spacer name="horizontalSpacer_2">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
@@ -284,6 +292,566 @@ font: 14pt &quot;DejaVu Sans&quot;;
             </widget>
            </item>
           </layout>
+         </widget>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QTabWidget" name="tabWidget">
+         <property name="minimumSize">
+          <size>
+           <width>400</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="tabPosition">
+          <enum>QTabWidget::South</enum>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="tab">
+          <attribute name="title">
+           <string>Status</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_10">
+           <item row="0" column="0">
+            <widget class="QFrame" name="gridFrame">
+             <property name="frameShape">
+              <enum>QFrame::Box</enum>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_9">
+              <property name="leftMargin">
+               <number>5</number>
+              </property>
+              <property name="topMargin">
+               <number>5</number>
+              </property>
+              <property name="rightMargin">
+               <number>5</number>
+              </property>
+              <property name="bottomMargin">
+               <number>5</number>
+              </property>
+              <item row="1" column="0">
+               <widget class="QGroupBox" name="gridGroupBox">
+                <property name="styleSheet">
+                 <string notr="true">QLabel {
+font: 14pt &quot;DejaVu Sans&quot;;
+}</string>
+                </property>
+                <property name="title">
+                 <string>Offsets</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_13">
+                 <item row="5" column="2">
+                  <widget class="MDIButton" name="mdibutton_2">
+                   <property name="text">
+                    <string>SetG5x
+Y</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>G10L20P0Y#&lt;offsetLabel&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="3">
+                  <widget class="QPushButton" name="pushButton_15">
+                   <property name="text">
+                    <string>+</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">offsetButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="0" column="2" colspan="2">
+                  <widget class="QLabel" name="offsetLabel">
+                   <property name="font">
+                    <font>
+                     <family>DejaVu Sans</family>
+                     <pointsize>14</pointsize>
+                     <weight>50</weight>
+                     <italic>false</italic>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::Box</enum>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="1">
+                  <widget class="QPushButton" name="pushButton_20">
+                   <property name="text">
+                    <string>-0.250</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">offsetButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="1" column="2">
+                  <widget class="QPushButton" name="pushButton_9">
+                   <property name="text">
+                    <string>9</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">offsetButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="5" column="3">
+                  <widget class="MDIButton" name="mdibutton_3">
+                   <property name="text">
+                    <string>SetG5x
+Z</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>G10L20P0Z#&lt;offsetLabel&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="3">
+                  <widget class="QPushButton" name="pushButton_8">
+                   <property name="text">
+                    <string>-</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">offsetButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QPushButton" name="pushButton_11">
+                   <property name="text">
+                    <string>7</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">offsetButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QPushButton" name="pushButton_12">
+                   <property name="text">
+                    <string>4</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">offsetButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="5" column="1">
+                  <widget class="MDIButton" name="mdibutton">
+                   <property name="text">
+                    <string>Set G5x
+X</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>G10L20P0X#&lt;offsetLabel&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QPushButton" name="pushButton_10">
+                   <property name="text">
+                    <string>8</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">offsetButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="4" column="3">
+                  <widget class="QPushButton" name="clearOffsetLabel">
+                   <property name="text">
+                    <string>Clear</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="0">
+                  <widget class="QPushButton" name="pushButton_16">
+                   <property name="text">
+                    <string>1</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">offsetButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="2" column="2">
+                  <widget class="QPushButton" name="pushButton_14">
+                   <property name="text">
+                    <string>6</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">offsetButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="2" column="1">
+                  <widget class="QPushButton" name="pushButton_13">
+                   <property name="text">
+                    <string>5</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">offsetButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="3" column="1">
+                  <widget class="QPushButton" name="pushButton_17">
+                   <property name="text">
+                    <string>2</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">offsetButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="3" column="2">
+                  <widget class="QPushButton" name="pushButton_18">
+                   <property name="text">
+                    <string>3</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">offsetButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="4" column="2">
+                  <widget class="QPushButton" name="pushButton_21">
+                   <property name="text">
+                    <string>0.250</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">offsetButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="3" column="3">
+                  <widget class="QPushButton" name="pushButton_23">
+                   <property name="text">
+                    <string>.</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">offsetButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="4" column="0">
+                  <widget class="QPushButton" name="pushButton_24">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">offsetButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="5" column="0">
+                  <widget class="QLabel" name="label_8">
+                   <property name="text">
+                    <string>G5x
+Coord</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="6" column="0">
+                  <widget class="QLabel" name="label_9">
+                   <property name="text">
+                    <string>G92
+Coord</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="6" column="1">
+                  <widget class="MDIButton" name="mdibutton_4">
+                   <property name="text">
+                    <string>Set G92
+X</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>G92X#&lt;offsetLabel&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="6" column="2">
+                  <widget class="MDIButton" name="mdibutton_5">
+                   <property name="text">
+                    <string>Set G92
+Y</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>G92Y#&lt;offsetLabel&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="6" column="3">
+                  <widget class="MDIButton" name="mdibutton_6">
+                   <property name="text">
+                    <string>Set G92
+Z</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>G92Z#&lt;offsetLabel&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QGroupBox" name="gridGroupBox">
+                <property name="font">
+                 <font>
+                  <family>DejaVu Sans</family>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLabel {
+font: 14pt &quot;DejaVu Sans&quot;;
+}
+StatusLabel {
+font: 14pt &quot;DejaVu Sans&quot;;
+}
+</string>
+                </property>
+                <property name="title">
+                 <string>DRO</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_11">
+                 <property name="leftMargin">
+                  <number>5</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>5</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>5</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>5</number>
+                 </property>
+                 <item row="2" column="0">
+                  <widget class="QLabel" name="label_5">
+                   <property name="text">
+                    <string>Relative</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="0">
+                  <widget class="QLabel" name="label_6">
+                   <property name="text">
+                    <string>G5x Offset</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="3">
+                  <widget class="StatusLabel" name="statuslabel_7">
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="rules" stdset="0">
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:axis?rel&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.3f}'.format(ch[0][2])&quot;, &quot;name&quot;: &quot;Relative Position&quot;}]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="1">
+                  <widget class="StatusLabel" name="statuslabel_5">
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="rules" stdset="0">
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:axis?rel&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.3f}'.format(ch[0][0])&quot;, &quot;name&quot;: &quot;Relative Position&quot;}]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="2">
+                  <widget class="StatusLabel" name="statuslabel_6">
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="rules" stdset="0">
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:axis?rel&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.3f}'.format(ch[0][1])&quot;, &quot;name&quot;: &quot;Relative Position&quot;}]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QLabel" name="label_4">
+                   <property name="text">
+                    <string>Absolute</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="2">
+                  <widget class="StatusLabel" name="statuslabel_3">
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="rules" stdset="0">
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:axis?abs&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.3f}'.format(ch[0][1])&quot;, &quot;name&quot;: &quot;Absolute Position&quot;}]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="3">
+                  <widget class="StatusLabel" name="statuslabel_4">
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="rules" stdset="0">
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:axis?abs&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.3f}'.format(ch[0][2])&quot;, &quot;name&quot;: &quot;Absolute Position&quot;}]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="3">
+                  <widget class="QLabel" name="label">
+                   <property name="text">
+                    <string>Z Axis</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QLabel" name="label_3">
+                   <property name="text">
+                    <string>X Axis</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="2">
+                  <widget class="QLabel" name="label_2">
+                   <property name="text">
+                    <string>Y Axis</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="StatusLabel" name="statuslabel_2">
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="rules" stdset="0">
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:axis?abs&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.3f}'.format(ch[0][0])&quot;, &quot;name&quot;: &quot;Absolute Position&quot;}]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="0">
+                  <widget class="QLabel" name="label_7">
+                   <property name="text">
+                    <string>G92 Offset</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="0">
+                  <widget class="StatusLabel" name="statuslabel_8">
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="rules" stdset="0">
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g5x_index&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;[\&quot;G53\&quot;,\&quot;G54\&quot;,\&quot;G55\&quot;,\&quot;G56\&quot;,\&quot;G57\&quot;,\&quot;G58\&quot;,\&quot;G59\&quot;,\&quot;G59.1\&quot;,\&quot;G59.2\&quot;,\&quot;G59.3\&quot;][ch[0]]&quot;, &quot;name&quot;: &quot;Current Coordinate Sytem&quot;}]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="1">
+                  <widget class="StatusLabel" name="statuslabel_9">
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="rules" stdset="0">
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g5x_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.3f}'.format(ch[0][0])&quot;, &quot;name&quot;: &quot;G5x Offset&quot;}]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="1">
+                  <widget class="StatusLabel" name="statuslabel_10">
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="rules" stdset="0">
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g92_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.3f}'.format(ch[0][0])&quot;, &quot;name&quot;: &quot;G92 Offset&quot;}]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="2">
+                  <widget class="StatusLabel" name="statuslabel_11">
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="rules" stdset="0">
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g5x_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.3f}'.format(ch[0][1])&quot;, &quot;name&quot;: &quot;G5x Offset&quot;}]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="2">
+                  <widget class="StatusLabel" name="statuslabel_12">
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="rules" stdset="0">
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g92_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.3f}'.format(ch[0][1])&quot;, &quot;name&quot;: &quot;G92 Offset&quot;}]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="3">
+                  <widget class="StatusLabel" name="statuslabel_13">
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="rules" stdset="0">
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g92_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.3f}'.format(ch[0][2])&quot;, &quot;name&quot;: &quot;G92 Offset&quot;}]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="3">
+                  <widget class="StatusLabel" name="statuslabel_14">
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="rules" stdset="0">
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g5x_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.3f}'.format(ch[0][2])&quot;, &quot;name&quot;: &quot;G5x Offset&quot;}]</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_2">
+          <attribute name="title">
+           <string>Tab 2</string>
+          </attribute>
          </widget>
         </widget>
        </item>
@@ -466,9 +1034,19 @@ font: 14pt &quot;DejaVu Sans&quot;;
    <header>qtpyvcp.widgets.input_widgets.file_system</header>
   </customwidget>
   <customwidget>
+   <class>MDIButton</class>
+   <extends>QPushButton</extends>
+   <header>qtpyvcp.widgets.button_widgets.mdi_button</header>
+  </customwidget>
+  <customwidget>
    <class>ActionButton</class>
    <extends>QPushButton</extends>
    <header>qtpyvcp.widgets.button_widgets.action_button</header>
+  </customwidget>
+  <customwidget>
+   <class>StatusLabel</class>
+   <extends>QLabel</extends>
+   <header>qtpyvcp.widgets.display_widgets.status_label</header>
   </customwidget>
  </customwidgets>
  <resources/>
@@ -481,6 +1059,22 @@ font: 14pt &quot;DejaVu Sans&quot;;
    <hints>
     <hint type="sourcelabel">
      <x>77</x>
+     <y>554</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>272</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>navSelect</sender>
+   <signal>clicked()</signal>
+   <receiver>filesystemtable</receiver>
+   <slot>openSelectedItem()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>593</x>
      <y>554</y>
     </hint>
     <hint type="destinationlabel">
@@ -506,20 +1100,119 @@ font: 14pt &quot;DejaVu Sans&quot;;
    </hints>
   </connection>
   <connection>
-   <sender>navSelect</sender>
+   <sender>clearOffsetLabel</sender>
    <signal>clicked()</signal>
-   <receiver>filesystemtable</receiver>
-   <slot>openSelectedItem()</slot>
+   <receiver>offsetLabel</receiver>
+   <slot>clear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>593</x>
-     <y>554</y>
+     <x>945</x>
+     <y>455</y>
     </hint>
     <hint type="destinationlabel">
-     <x>335</x>
-     <y>272</y>
+     <x>899</x>
+     <y>243</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pView</sender>
+   <signal>clicked()</signal>
+   <receiver>gcodebackplot</receiver>
+   <slot>setViewP()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>73</x>
+     <y>533</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>308</x>
+     <y>262</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>xView</sender>
+   <signal>clicked()</signal>
+   <receiver>gcodebackplot</receiver>
+   <slot>setViewX()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>152</x>
+     <y>533</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>308</x>
+     <y>262</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>yView</sender>
+   <signal>clicked()</signal>
+   <receiver>gcodebackplot</receiver>
+   <slot>setViewY()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>230</x>
+     <y>533</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>308</x>
+     <y>262</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>zView</sender>
+   <signal>clicked()</signal>
+   <receiver>gcodebackplot</receiver>
+   <slot>setViewZ()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>308</x>
+     <y>533</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>308</x>
+     <y>262</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>zoomViewIn</sender>
+   <signal>clicked()</signal>
+   <receiver>gcodebackplot</receiver>
+   <slot>zoomIn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>386</x>
+     <y>533</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>308</x>
+     <y>262</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>zoomViewOut</sender>
+   <signal>clicked()</signal>
+   <receiver>gcodebackplot</receiver>
+   <slot>zoomOut()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>465</x>
+     <y>533</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>308</x>
+     <y>262</y>
     </hint>
    </hints>
   </connection>
  </connections>
+ <buttongroups>
+  <buttongroup name="offsetButtonGroup"/>
+ </buttongroups>
 </ui>

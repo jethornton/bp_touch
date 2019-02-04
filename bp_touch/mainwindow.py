@@ -9,4 +9,13 @@ class MyMainWindow(VCPMainWindow):
     def __init__(self, *args, **kwargs):
         super(MyMainWindow, self).__init__(*args, **kwargs)
 
-    # add any custom methods here
+        self.offsetButtonGroup.buttonClicked.connect(self.offsetHandleKeys)
+
+    def offsetHandleKeys(self, button):
+        char = str(button.text())
+        text = self.offsetLabel.text() or '0'
+        if text != '0':
+            text += char
+        else:
+            text = char
+        self.offsetLabel.setText(text)
