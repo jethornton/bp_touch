@@ -15,4 +15,14 @@ If you get an error about something not being in the filesystemtable then you
 need to update QtPyVCP with
 ``pip install git+https://github.com/kcjengr/qtpyvcp.git --upgrade``
 
+Main Tab
 ![BP Touch QtPyVCP](bp-touch-01.png)
+
+File Tab
+![BP Touch File Loader](bp-touch-02.png)
+
+MDI Tab
+![BP Touch File Loader](bp-touch-03.png)
+
+Jog Tab
+![BP Touch File Loader](bp-touch-04.png)
