@@ -1,6 +1,8 @@
 # bp_touch
 BP Knee Mill QtPyVCP Touch screen
 
+Requires `QtPyVCP <https://qtpyvcp.kcjengr.com/`_ to be installed and working.
+
 Clone with ``git clone https://github.com/jethornton/bp_touch.git``
 
 To install and be able to edit open a terminal in the bp_touch directory and do
