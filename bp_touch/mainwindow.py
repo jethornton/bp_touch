@@ -12,7 +12,8 @@ class MyMainWindow(VCPMainWindow):
         self.offsetButtonGroup.buttonClicked.connect(self.offsetHandleKeys)
         self.mdiButtonGroup.buttonClicked.connect(self.mdiHandleKeys)
         self.mdiBackSpaceKey.clicked.connect(self.mdiBackSpace)
-        self.mdiClearKey.clicked.connect(self.mdiClear)
+        self.toolOffsetGroup.buttonClicked.connect(self.toolHandleKeys)
+        self.toolOffsetBackspace.clicked.connect(self.toolBackSpace)
 
     def offsetHandleKeys(self, button):
         char = str(button.text())
@@ -37,5 +38,13 @@ class MyMainWindow(VCPMainWindow):
             text = self.mdiEntry.text()[:-1]
             self.mdiEntry.setText(text)
 
-    def mdiClear(self):
-        self.mdiEntry.setText('')
+    def toolHandleKeys(self, button):
+        text = self.toolOffsetLabel.text()
+        if len(text) > 0:
+            self.toolOffsetLabel.setText(text + button.text())
+        else:
+            self.toolOffsetLabel.setText(button.text())
+
+    def toolBackSpace(self):
+        text = self.toolOffsetLabel.text()[:-1]
+        self.toolOffsetLabel.setText(text)
