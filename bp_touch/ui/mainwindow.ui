@@ -916,16 +916,22 @@ font: 14pt &quot;DejaVu Sans&quot;;
                  </item>
                  <item row="5" column="2">
                   <widget class="StatusLabel" name="statuslabel_18">
+                   <property name="frameShape">
+                    <enum>QFrame::Box</enum>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
                    <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status: tool_in_spindle&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Tool {}'.format(ch[0])&quot;, &quot;name&quot;: &quot;Tool in Spindle&quot;}]</string>
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status: tool_in_spindle&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Tool {}'.format(ch[0])&quot;, &quot;name&quot;: &quot;Tool in Spindle&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status: tool_in_spindle&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'background-color: rgb(240,240,80)' if ch[0] == 0 else 'background-color: rgb(150,255,150)'&quot;, &quot;name&quot;: &quot;Background Color&quot;}]</string>
                    </property>
                   </widget>
                  </item>
                  <item row="5" column="1">
                   <widget class="StatusLabel" name="statuslabel_8">
+                   <property name="frameShape">
+                    <enum>QFrame::Box</enum>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -936,6 +942,9 @@ font: 14pt &quot;DejaVu Sans&quot;;
                  </item>
                  <item row="5" column="0">
                   <widget class="StatusLabel" name="statuslabel_24">
+                   <property name="frameShape">
+                    <enum>QFrame::Box</enum>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
