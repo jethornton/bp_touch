@@ -27,7 +27,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QTabBar::tab {
-height: 50px; width: 90px;
+height: 50px; width: 85px;
 font: 14pt &quot;DejaVu Sans&quot;; }
 
 ActionButton {
@@ -364,7 +364,7 @@ border: 5px solid rgb(136, 138, 133);
         <widget class="QTabWidget" name="tabWidget">
          <property name="minimumSize">
           <size>
-           <width>400</width>
+           <width>450</width>
            <height>0</height>
           </size>
          </property>
@@ -380,11 +380,11 @@ font: 14pt &quot;DejaVu Sans&quot;;
           <enum>QTabWidget::South</enum>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>4</number>
          </property>
          <widget class="QWidget" name="tab">
           <attribute name="title">
-           <string>Status</string>
+           <string>DRO</string>
           </attribute>
           <layout class="QGridLayout" name="gridLayout_10">
            <item row="0" column="0">
@@ -799,16 +799,6 @@ font: 14pt &quot;DejaVu Sans&quot;;
                    </property>
                   </widget>
                  </item>
-                 <item row="0" column="0">
-                  <widget class="StatusLabel" name="statuslabel_8">
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                   <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g5x_index&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;[\&quot;G53\&quot;,\&quot;G54\&quot;,\&quot;G55\&quot;,\&quot;G56\&quot;,\&quot;G57\&quot;,\&quot;G58\&quot;,\&quot;G59\&quot;,\&quot;G59.1\&quot;,\&quot;G59.2\&quot;,\&quot;G59.3\&quot;][ch[0]]&quot;, &quot;name&quot;: &quot;Current Coordinate Sytem&quot;}]</string>
-                   </property>
-                  </widget>
-                 </item>
                  <item row="0" column="3">
                   <widget class="StatusLabel" name="statuslabel_17">
                    <property name="alignment">
@@ -891,40 +881,33 @@ font: 14pt &quot;DejaVu Sans&quot;;
                    </property>
                   </widget>
                  </item>
-                 <item row="5" column="0">
+                 <item row="5" column="2">
                   <widget class="StatusLabel" name="statuslabel_18">
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
                    <property name="rules" stdset="0">
                     <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status: tool_in_spindle&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Tool {}'.format(ch[0])&quot;, &quot;name&quot;: &quot;Tool in Spindle&quot;}]</string>
                    </property>
                   </widget>
                  </item>
                  <item row="5" column="1">
-                  <widget class="StatusLabel" name="statuslabel_19">
+                  <widget class="StatusLabel" name="statuslabel_8">
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
                    <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status: tool_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.3f}'.format(ch[0][0])&quot;, &quot;name&quot;: &quot;Tool Offsets&quot;}]</string>
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g5x_index&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;[\&quot;G53\&quot;,\&quot;G54\&quot;,\&quot;G55\&quot;,\&quot;G56\&quot;,\&quot;G57\&quot;,\&quot;G58\&quot;,\&quot;G59\&quot;,\&quot;G59.1\&quot;,\&quot;G59.2\&quot;,\&quot;G59.3\&quot;][ch[0]]&quot;, &quot;name&quot;: &quot;Current Coordinate Sytem&quot;}]</string>
                    </property>
                   </widget>
                  </item>
-                 <item row="5" column="2">
-                  <widget class="StatusLabel" name="statuslabel_20">
+                 <item row="5" column="0">
+                  <widget class="StatusLabel" name="statuslabel_24">
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
                    <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status: tool_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.3f}'.format(ch[0][1])&quot;, &quot;name&quot;: &quot;Tool Offsets&quot;}]</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="5" column="3">
-                  <widget class="StatusLabel" name="statuslabel_21">
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                   <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status: tool_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.3f}'.format(ch[0][2])&quot;, &quot;name&quot;: &quot;Tool Offsets&quot;}]</string>
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status: task_mode?text&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Mode&quot;}]</string>
                    </property>
                   </widget>
                  </item>
@@ -1153,6 +1136,9 @@ font: 14pt &quot;DejaVu Sans&quot;;
                  <string>X Tool
 Offset</string>
                 </property>
+                <property name="MDICommand" stdset="0">
+                 <string>G10L10P#&lt;toolInSpindle&gt;X#&lt;toolOffsetLabel&gt;</string>
+                </property>
                </widget>
               </item>
               <item row="2" column="3">
@@ -1206,6 +1192,9 @@ Offset</string>
                 <property name="text">
                  <string>Y Tool
 Offset</string>
+                </property>
+                <property name="MDICommand" stdset="0">
+                 <string>G10L10P#&lt;toolInSpindle&gt;Y#&lt;toolOffsetLabel&gt;</string>
                 </property>
                </widget>
               </item>
@@ -1739,19 +1728,6 @@ want in the buttons</string>
                 </property>
                </widget>
               </item>
-              <item row="0" column="1">
-               <spacer name="verticalSpacer_2">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>40</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
               <item row="5" column="0">
                <widget class="QLabel" name="label">
                 <property name="text">
@@ -1815,16 +1791,6 @@ want in the buttons</string>
                 </property>
                </widget>
               </item>
-              <item row="2" column="0" colspan="4">
-               <widget class="ActionSlider" name="actionslider_2">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="actionName" stdset="0">
-                 <string>machine.feed-override.set</string>
-                </property>
-               </widget>
-              </item>
               <item row="4" column="0" colspan="4">
                <widget class="ActionSlider" name="actionslider">
                 <property name="orientation">
@@ -1852,6 +1818,213 @@ want in the buttons</string>
                 </property>
                 <property name="rules" stdset="0">
                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:rapidrate&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Feed Rate ' + str(ch[0]*100) + '%'&quot;, &quot;name&quot;: &quot;Rapid Rate&quot;}]</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0" colspan="4">
+               <widget class="ActionSlider" name="actionslider_2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="actionName" stdset="0">
+                 <string>machine.feed-override.set</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0" rowspan="2" colspan="3">
+               <widget class="QGroupBox" name="gridGroupBox">
+                <property name="title">
+                 <string>Probe</string>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_22"/>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_7">
+          <attribute name="title">
+           <string>Probe</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_24">
+           <item row="1" column="0">
+            <widget class="QFrame" name="gridFrame">
+             <property name="frameShape">
+              <enum>QFrame::Box</enum>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_23">
+              <property name="leftMargin">
+               <number>5</number>
+              </property>
+              <property name="topMargin">
+               <number>5</number>
+              </property>
+              <property name="rightMargin">
+               <number>5</number>
+              </property>
+              <property name="bottomMargin">
+               <number>5</number>
+              </property>
+              <item row="1" column="0">
+               <widget class="QGroupBox" name="gridGroupBox">
+                <property name="title">
+                 <string>Probe Routines</string>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_26">
+                 <item row="2" column="0">
+                  <widget class="MDIButton" name="mdibutton_15">
+                   <property name="text">
+                    <string>Left</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="1">
+                  <widget class="MDIButton" name="mdibutton_9">
+                   <property name="text">
+                    <string>Front</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="2">
+                  <widget class="MDIButton" name="mdibutton_11">
+                   <property name="text">
+                    <string>Right</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="MDIButton" name="mdibutton_14">
+                   <property name="text">
+                    <string>Back</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>o&lt;p-back&gt; call</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="1">
+                  <widget class="MDIButton" name="mdibutton_10">
+                   <property name="text">
+                    <string>Hole</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="0" colspan="3">
+                  <widget class="QLabel" name="label_12">
+                   <property name="text">
+                    <string>This is under construction, some items
+may work you will need the subroutine files</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="ProbeSim" name="probesim"/>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QGroupBox" name="gridGroupBox">
+                <property name="title">
+                 <string>Set Coordinate System</string>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_25">
+                 <item row="3" column="1">
+                  <widget class="MDIButton" name="mdibutton_17">
+                   <property name="text">
+                    <string>Set Y
+-.250</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>G10L20P0Y-0.250</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="2">
+                  <widget class="MDIButton" name="mdibutton_12">
+                   <property name="text">
+                    <string>Set X
+0.250</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>G10 L20 P0 X0.250</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="MDIButton" name="mdibutton_13">
+                   <property name="text">
+                    <string>Set Y
+0.250</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>G10 L20 P0 Y0.250</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="MDIButton" name="mdibutton_8">
+                   <property name="text">
+                    <string>Set X
+-0.250</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>G10 L20 P0 X-0.250</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="1">
+                  <widget class="MDIButton" name="mdibutton_16">
+                   <property name="text">
+                    <string>Set Hole
+Center</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>G10 L20 P0 X0 Y0</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QFrame" name="gridFrame">
+             <property name="frameShape">
+              <enum>QFrame::Box</enum>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_27">
+              <item row="0" column="0">
+               <widget class="StatusLabel" name="statuslabel_19">
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:axis?rel&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.3f}'.format(ch[0][0])&quot;, &quot;name&quot;: &quot;Relative Position&quot;}]</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="StatusLabel" name="statuslabel_20">
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:axis?rel&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.3f}'.format(ch[0][1])&quot;, &quot;name&quot;: &quot;Relative Position&quot;}]</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="StatusLabel" name="statuslabel_21">
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:axis?rel&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.3f}'.format(ch[0][2])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
                 </property>
                </widget>
               </item>
@@ -2044,6 +2217,11 @@ want in the buttons</string>
    <class>MDIButton</class>
    <extends>QPushButton</extends>
    <header>qtpyvcp.widgets.button_widgets.mdi_button</header>
+  </customwidget>
+  <customwidget>
+   <class>ProbeSim</class>
+   <extends>QWidget</extends>
+   <header>qtpyvcp.widgets.input_widgets.probesim_widget</header>
   </customwidget>
   <customwidget>
    <class>MDIEntry</class>
@@ -2329,5 +2507,6 @@ want in the buttons</string>
   <buttongroup name="mdiButtonGroup"/>
   <buttongroup name="offsetButtonGroup"/>
   <buttongroup name="toolOffsetGroup"/>
+  <buttongroup name="probeButtonGroup"/>
  </buttongroups>
 </ui>
