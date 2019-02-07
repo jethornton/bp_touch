@@ -5,7 +5,7 @@ o<p-back> sub
 #<feednorm> = 5
 #<feedslow> = 0.2
 #<maxtravel> = 0.500
-#<backup> = 0.125
+#<backup> = 0.025
 #<offset> = 0.250
 #<probediam> = 0.07874
 
@@ -13,12 +13,12 @@ G20
 G91
 G38.2 F#<feednorm> Y#<maxtravel>
 G90
-G0 Y[#5062-#<backup>]
+G0 Y[#5062 - #<backup>]
 G4P2
 G91
-G38.2 F#<feedslow> Y[#<backup>*2.0]
+G38.2 F#<feedslow> Y[#<backup> * 1.5]
 G90
-G0 Y[#5062-#<yoffset>+#<probediam>/2.0]
+G0 Y[#5062 - #<yoffset> + #<probediam>/2.0]
 (debug,Spindle center is -#<yoffset> from the edge)
 
 o<p-back> endsub
