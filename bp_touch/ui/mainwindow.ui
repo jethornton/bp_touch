@@ -380,7 +380,7 @@ font: 14pt &quot;DejaVu Sans&quot;;
           <enum>QTabWidget::South</enum>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>4</number>
          </property>
          <widget class="QWidget" name="tab">
           <attribute name="title">
@@ -1936,9 +1936,6 @@ may work you will need the subroutine files</string>
                    </property>
                   </widget>
                  </item>
-                 <item row="3" column="0">
-                  <widget class="ProbeSim" name="probesim"/>
-                 </item>
                  <item row="3" column="2">
                   <widget class="MDIButton" name="mdibutton_18">
                    <property name="text">
@@ -2043,7 +2040,7 @@ Center</string>
                  <set>Qt::AlignCenter</set>
                 </property>
                 <property name="rules" stdset="0">
-                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:axis?rel&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.3f}'.format(ch[0][0])&quot;, &quot;name&quot;: &quot;Relative Position&quot;}]</string>
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:axis?rel&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'X {:.3f}'.format(ch[0][0])&quot;, &quot;name&quot;: &quot;Relative Position&quot;}]</string>
                 </property>
                </widget>
               </item>
@@ -2053,7 +2050,7 @@ Center</string>
                  <set>Qt::AlignCenter</set>
                 </property>
                 <property name="rules" stdset="0">
-                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:axis?rel&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.3f}'.format(ch[0][1])&quot;, &quot;name&quot;: &quot;Relative Position&quot;}]</string>
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:axis?rel&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Y {:.3f}'.format(ch[0][1])&quot;, &quot;name&quot;: &quot;Relative Position&quot;}]</string>
                 </property>
                </widget>
               </item>
@@ -2063,7 +2060,7 @@ Center</string>
                  <set>Qt::AlignCenter</set>
                 </property>
                 <property name="rules" stdset="0">
-                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:axis?rel&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.3f}'.format(ch[0][2])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:axis?rel&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Z {:.3f}'.format(ch[0][2])&quot;, &quot;name&quot;: &quot;Relative Position&quot;}]</string>
                 </property>
                </widget>
               </item>
@@ -2256,11 +2253,6 @@ Center</string>
    <class>MDIButton</class>
    <extends>QPushButton</extends>
    <header>qtpyvcp.widgets.button_widgets.mdi_button</header>
-  </customwidget>
-  <customwidget>
-   <class>ProbeSim</class>
-   <extends>QWidget</extends>
-   <header>qtpyvcp.widgets.input_widgets.probesim_widget</header>
   </customwidget>
   <customwidget>
    <class>MDIEntry</class>
