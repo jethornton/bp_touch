@@ -1,0 +1,26 @@
+(file p-top.ngc)
+
+o<p-top> sub
+
+#<feednorm> = 5
+#<feedslow> = 0.2
+#<maxtravel> = 0.500
+#<backup> = 0.250
+#<offset> = 0.250
+#<probediam> = 0.07874
+
+G20
+G91
+G38.2 F#<feednorm> Z-#<maxtravel>
+G90
+G0 Z[#5063 + #<backup>]
+G4P2
+G91
+G38.2 F#<feedslow> Z-[#<backup>*2.0]
+G90
+G0 Z[#5063 + #<offset>]
+(debug,Probe tip is #<offset> above)
+o<p-top> endsub
+
+M2
+

@@ -1876,28 +1876,41 @@ want in the buttons</string>
                  <item row="2" column="0">
                   <widget class="MDIButton" name="mdibutton_15">
                    <property name="text">
-                    <string>Left</string>
+                    <string>Probe
+to Left</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>o&lt;p-left&gt; call</string>
                    </property>
                   </widget>
                  </item>
                  <item row="3" column="1">
                   <widget class="MDIButton" name="mdibutton_9">
                    <property name="text">
-                    <string>Front</string>
+                    <string>Probe
+to Front</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>o&lt;p-front&gt; call</string>
                    </property>
                   </widget>
                  </item>
                  <item row="2" column="2">
                   <widget class="MDIButton" name="mdibutton_11">
                    <property name="text">
-                    <string>Right</string>
+                    <string>Probe
+to Right</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>o&lt;p-right&gt; call</string>
                    </property>
                   </widget>
                  </item>
                  <item row="1" column="1">
                   <widget class="MDIButton" name="mdibutton_14">
                    <property name="text">
-                    <string>Back</string>
+                    <string>Probe
+to Back</string>
                    </property>
                    <property name="MDICommand" stdset="0">
                     <string>o&lt;p-back&gt; call</string>
@@ -1907,7 +1920,11 @@ want in the buttons</string>
                  <item row="2" column="1">
                   <widget class="MDIButton" name="mdibutton_10">
                    <property name="text">
-                    <string>Hole</string>
+                    <string>Probe
+a Hole</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>o&lt;p-hole&gt; call</string>
                    </property>
                   </widget>
                  </item>
@@ -1919,8 +1936,19 @@ may work you will need the subroutine files</string>
                    </property>
                   </widget>
                  </item>
-                 <item row="1" column="0">
+                 <item row="3" column="0">
                   <widget class="ProbeSim" name="probesim"/>
+                 </item>
+                 <item row="3" column="2">
+                  <widget class="MDIButton" name="mdibutton_18">
+                   <property name="text">
+                    <string>Probe
+Top</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>o&lt;p-top&gt; call</string>
+                   </property>
+                  </widget>
                  </item>
                 </layout>
                </widget>
@@ -1983,6 +2011,17 @@ Center</string>
                    </property>
                    <property name="MDICommand" stdset="0">
                     <string>G10 L20 P0 X0 Y0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="2">
+                  <widget class="MDIButton" name="mdibutton_19">
+                   <property name="text">
+                    <string>Set Z
+0.250</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>G10 L20 P0 Z0.250</string>
                    </property>
                   </widget>
                  </item>
