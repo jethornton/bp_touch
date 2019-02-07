@@ -397,13 +397,13 @@ font: 14pt &quot;DejaVu Sans&quot;;
                <number>5</number>
               </property>
               <property name="topMargin">
-               <number>5</number>
+               <number>1</number>
               </property>
               <property name="rightMargin">
                <number>5</number>
               </property>
               <property name="bottomMargin">
-               <number>5</number>
+               <number>1</number>
               </property>
               <item row="1" column="1">
                <widget class="QGroupBox" name="gridGroupBox">
@@ -419,11 +419,17 @@ font: 14pt &quot;DejaVu Sans&quot;;
                  <set>Qt::AlignCenter</set>
                 </property>
                 <layout class="QGridLayout" name="gridLayout_13">
+                 <property name="topMargin">
+                  <number>1</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>1</number>
+                 </property>
                  <item row="5" column="2">
                   <widget class="MDIButton" name="mdibutton_2">
                    <property name="text">
-                    <string>SetG5x
-Y</string>
+                    <string>Set
+Y Offset</string>
                    </property>
                    <property name="MDICommand" stdset="0">
                     <string>G10L20P0Y#&lt;offsetLabel&gt;</string>
@@ -485,8 +491,8 @@ Y</string>
                  <item row="5" column="3">
                   <widget class="MDIButton" name="mdibutton_3">
                    <property name="text">
-                    <string>SetG5x
-Z</string>
+                    <string>Set
+Z Offset</string>
                    </property>
                    <property name="MDICommand" stdset="0">
                     <string>G10L20P0Z#&lt;offsetLabel&gt;</string>
@@ -526,8 +532,8 @@ Z</string>
                  <item row="5" column="1">
                   <widget class="MDIButton" name="mdibutton">
                    <property name="text">
-                    <string>Set G5x
-X</string>
+                    <string>Set
+X Offset</string>
                    </property>
                    <property name="MDICommand" stdset="0">
                     <string>G10L20P0X#&lt;offsetLabel&gt;</string>
@@ -631,7 +637,31 @@ X</string>
                    </attribute>
                   </widget>
                  </item>
-                 <item row="5" column="0">
+                 <item row="6" column="1">
+                  <widget class="MDIButton" name="mdibutton_20">
+                   <property name="text">
+                    <string>Clear
+X Offset</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="6" column="2">
+                  <widget class="MDIButton" name="mdibutton_21">
+                   <property name="text">
+                    <string>Clear
+Y Offset</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="6" column="3">
+                  <widget class="MDIButton" name="mdibutton_22">
+                   <property name="text">
+                    <string>Clear
+Z Offset</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="5" column="0" rowspan="2">
                   <widget class="QLabel" name="label_8">
                    <property name="text">
                     <string>G5x
@@ -646,7 +676,7 @@ Coord</string>
                </widget>
               </item>
               <item row="0" column="1">
-               <widget class="QGroupBox" name="gridGroupBox">
+               <widget class="QFrame" name="gridFrame">
                 <property name="font">
                  <font>
                   <family>DejaVu Sans</family>
@@ -662,24 +692,18 @@ font: 14pt &quot;DejaVu Sans&quot;;
 }
 </string>
                 </property>
-                <property name="title">
-                 <string>DRO</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
                 <layout class="QGridLayout" name="gridLayout_11">
                  <property name="leftMargin">
                   <number>5</number>
                  </property>
                  <property name="topMargin">
-                  <number>5</number>
+                  <number>1</number>
                  </property>
                  <property name="rightMargin">
                   <number>5</number>
                  </property>
                  <property name="bottomMargin">
-                  <number>5</number>
+                  <number>1</number>
                  </property>
                  <item row="2" column="0">
                   <widget class="QLabel" name="label_5">
