@@ -15,6 +15,9 @@ class MyMainWindow(VCPMainWindow):
         self.toolOffsetGroup.buttonClicked.connect(self.toolHandleKeys)
         self.toolOffsetBackspace.clicked.connect(self.toolBackSpace)
 
+    def on_exitButton_clicked(self):
+        self.app.quit()
+
     def offsetHandleKeys(self, button):
         char = str(button.text())
         text = self.offsetLabel.text() or '0'
