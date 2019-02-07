@@ -1831,13 +1831,8 @@ want in the buttons</string>
                 </property>
                </widget>
               </item>
-              <item row="0" column="0" rowspan="2" colspan="3">
-               <widget class="QGroupBox" name="gridGroupBox">
-                <property name="title">
-                 <string>Probe</string>
-                </property>
-                <layout class="QGridLayout" name="gridLayout_22"/>
-               </widget>
+              <item row="0" column="3">
+               <widget class="SubCallButton" name="subcallbutton"/>
               </item>
              </layout>
             </widget>
@@ -2175,13 +2170,6 @@ Center</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="0">
-           <widget class="ActionButton" name="actionbutton_7">
-            <property name="text">
-             <string>Exit</string>
-            </property>
-           </widget>
-          </item>
           <item row="0" column="4">
            <spacer name="horizontalSpacer">
             <property name="orientation">
@@ -2194,6 +2182,13 @@ Center</string>
              </size>
             </property>
            </spacer>
+          </item>
+          <item row="0" column="0">
+           <widget class="QPushButton" name="exitButton">
+            <property name="text">
+             <string>Exit</string>
+            </property>
+           </widget>
           </item>
          </layout>
         </widget>
@@ -2243,6 +2238,11 @@ Center</string>
    <extends>QWidget</extends>
    <header>qtpyvcp.widgets.display_widgets.gcode_backplot.gcode_backplot</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SubCallButton</class>
+   <extends>QPushButton</extends>
+   <header>qtpyvcp.widgets.button_widgets.subcall_button</header>
   </customwidget>
   <customwidget>
    <class>FileSystemTable</class>
