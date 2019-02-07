@@ -5,9 +5,9 @@ o<p-back> sub
 #<feednorm> = 5
 #<feedslow> = 0.2
 #<probediam> = 0.07874
-#<maxtravel> = 0.5
-#<backup> = 0.25
-#<offset> =0.2
+#<maxtravel> = 0.500
+#<backup> = 0.250
+#<offset> =0.250
 
 G20
 G91
