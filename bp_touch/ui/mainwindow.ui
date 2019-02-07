@@ -643,6 +643,9 @@ X Offset</string>
                     <string>Clear
 X Offset</string>
                    </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>G10 L2 P0 X0</string>
+                   </property>
                   </widget>
                  </item>
                  <item row="6" column="2">
@@ -651,6 +654,9 @@ X Offset</string>
                     <string>Clear
 Y Offset</string>
                    </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>G10 L2 P0 Y0</string>
+                   </property>
                   </widget>
                  </item>
                  <item row="6" column="3">
@@ -658,6 +664,9 @@ Y Offset</string>
                    <property name="text">
                     <string>Clear
 Z Offset</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>G10 L2 P0 Z0</string>
                    </property>
                   </widget>
                  </item>
