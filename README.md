@@ -13,9 +13,8 @@ configs directory to your linuxcnc/configs directory.
 
 To update just do a ``git pull`` from the bp_touch directory.
 
-If you get an error about something not being in the filesystemtable then you
-need to update QtPyVCP with
-``pip install git+https://github.com/kcjengr/qtpyvcp.git --upgrade``
+Starting to add probe routines, you must copy the subroutine files to a
+directory on your LinuxCNC Path. Currently only probe back or Y+ is working.
 
 Main Tab
 ![BP Touch QtPyVCP](bp-touch-01.png)
