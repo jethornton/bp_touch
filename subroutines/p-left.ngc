@@ -14,11 +14,10 @@ G91
 G38.2 F#<feednorm> X-#<maxtravel>
 G90
 G0 X[#5061 + #<backup>]
-G4P2
 G91
 G38.2 F#<feedslow> X-[#<backup> * 1.5]
 G90
-G0 X[#5061 + #<offset> + [#<probediam>/2.0]]
+G0 X[#5061 + [#<offset> + [#<probediam>/2.0]]]
 (debug,Spindle center is X#<offset> from the edge)
 o<p-left> endsub
 
