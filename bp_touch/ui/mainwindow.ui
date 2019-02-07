@@ -380,7 +380,7 @@ font: 14pt &quot;DejaVu Sans&quot;;
           <enum>QTabWidget::South</enum>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>3</number>
          </property>
          <widget class="QWidget" name="tab">
           <attribute name="title">
@@ -1790,19 +1790,6 @@ want in the buttons</string>
                 </property>
                </widget>
               </item>
-              <item row="7" column="3">
-               <spacer name="horizontalSpacer_3">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>40</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
               <item row="6" column="1">
                <widget class="ActionButton" name="actionbutton_12">
                 <property name="text">
@@ -1833,7 +1820,7 @@ want in the buttons</string>
                 </property>
                </widget>
               </item>
-              <item row="4" column="0" colspan="4">
+              <item row="4" column="0" colspan="5">
                <widget class="ActionSlider" name="actionslider">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
@@ -1843,27 +1830,27 @@ want in the buttons</string>
                 </property>
                </widget>
               </item>
-              <item row="1" column="3">
+              <item row="1" column="4">
                <widget class="StatusLabel" name="statuslabel_22">
                 <property name="alignment">
-                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 <set>Qt::AlignCenter</set>
                 </property>
                 <property name="rules" stdset="0">
-                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:feedrate&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Rapid Rate ' + str(ch[0]*100) + '%'&quot;, &quot;name&quot;: &quot;Feed Override&quot;}]</string>
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:feedrate&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Rapid Rate\\n' + str(ch[0]*100) + '%'&quot;, &quot;name&quot;: &quot;Feed Override&quot;}]</string>
                 </property>
                </widget>
               </item>
-              <item row="3" column="3">
+              <item row="3" column="4">
                <widget class="StatusLabel" name="statuslabel_23">
                 <property name="alignment">
-                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 <set>Qt::AlignCenter</set>
                 </property>
                 <property name="rules" stdset="0">
-                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:rapidrate&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Feed Rate ' + str(ch[0]*100) + '%'&quot;, &quot;name&quot;: &quot;Rapid Rate&quot;}]</string>
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:rapidrate&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Feed Rate\\n' + str(ch[0]*100) + '%'&quot;, &quot;name&quot;: &quot;Rapid Rate&quot;}]</string>
                 </property>
                </widget>
               </item>
-              <item row="2" column="0" colspan="4">
+              <item row="2" column="0" colspan="5">
                <widget class="ActionSlider" name="actionslider_2">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
@@ -1873,8 +1860,78 @@ want in the buttons</string>
                 </property>
                </widget>
               </item>
-              <item row="0" column="3">
-               <widget class="SubCallButton" name="subcallbutton"/>
+              <item row="0" column="0" colspan="5">
+               <widget class="QGroupBox" name="gridGroupBox">
+                <property name="title">
+                 <string>Spindle Controls</string>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_22">
+                 <item row="0" column="2">
+                  <widget class="ActionButton" name="actionbutton_7">
+                   <property name="text">
+                    <string>Spindle
+Fwd</string>
+                   </property>
+                   <property name="actionName" stdset="0">
+                    <string>spindle.forward</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="0">
+                  <widget class="ActionButton" name="actionbutton_16">
+                   <property name="text">
+                    <string>Spindle
+Rev</string>
+                   </property>
+                   <property name="actionName" stdset="0">
+                    <string>spindle.reverse</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="2">
+                  <widget class="ActionButton" name="actionbutton_18">
+                   <property name="text">
+                    <string>Spindle
+-</string>
+                   </property>
+                   <property name="actionName" stdset="0">
+                    <string>spindle.slower</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="ActionButton" name="actionbutton_17">
+                   <property name="text">
+                    <string>Spindle
++</string>
+                   </property>
+                   <property name="actionName" stdset="0">
+                    <string>spindle.faster</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="ActionButton" name="actionbutton_19">
+                   <property name="text">
+                    <string>Spindle Stop</string>
+                   </property>
+                   <property name="actionName" stdset="0">
+                    <string>spindle.off</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="StatusLabel" name="statuslabel_25">
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="rules" stdset="0">
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:spindle[0].speed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.0f}'.format(ch[0])&quot;, &quot;name&quot;: &quot;Spindle Speed&quot;}]</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
               </item>
              </layout>
             </widget>
@@ -2280,11 +2337,6 @@ Center</string>
    <extends>QWidget</extends>
    <header>qtpyvcp.widgets.display_widgets.gcode_backplot.gcode_backplot</header>
    <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>SubCallButton</class>
-   <extends>QPushButton</extends>
-   <header>qtpyvcp.widgets.button_widgets.subcall_button</header>
   </customwidget>
   <customwidget>
    <class>FileSystemTable</class>
