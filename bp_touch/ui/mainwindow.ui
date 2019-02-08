@@ -192,7 +192,20 @@ border: 5px solid rgb(136, 138, 133);
                </widget>
               </item>
               <item row="0" column="0">
-               <widget class="GcodeBackplot" name="gcodebackplot"/>
+               <widget class="GcodeBackplot" name="gcodebackplot">
+                <property name="defaultView" stdset="0">
+                 <string>p</string>
+                </property>
+                <property name="_dtg" stdset="0">
+                 <bool>false</bool>
+                </property>
+                <property name="metricUnits">
+                 <bool>false</bool>
+                </property>
+                <property name="renderProgramAlpha" stdset="0">
+                 <bool>false</bool>
+                </property>
+               </widget>
               </item>
              </layout>
             </widget>
@@ -201,7 +214,7 @@ border: 5px solid rgb(136, 138, 133);
          </widget>
          <widget class="QWidget" name="tab_4">
           <attribute name="title">
-           <string>File</string>
+           <string>Open</string>
           </attribute>
           <layout class="QGridLayout" name="gridLayout_7">
            <item row="0" column="0">
@@ -230,14 +243,17 @@ border: 5px solid rgb(136, 138, 133);
                   <pointsize>12</pointsize>
                  </font>
                 </property>
+                <property name="autoScrollMargin">
+                 <number>30</number>
+                </property>
                 <property name="sortingEnabled">
                  <bool>false</bool>
                 </property>
                 <property name="hiddenColumns" stdset="0">
-                 <string>2</string>
+                 <string>1,2</string>
                 </property>
                 <attribute name="horizontalHeaderDefaultSectionSize">
-                 <number>150</number>
+                 <number>250</number>
                 </attribute>
                 <attribute name="verticalHeaderDefaultSectionSize">
                  <number>50</number>
@@ -357,6 +373,37 @@ border: 5px solid rgb(136, 138, 133);
             </widget>
            </item>
           </layout>
+         </widget>
+         <widget class="QWidget" name="tab_8">
+          <attribute name="title">
+           <string>File</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="GcodeEditor" name="gcodeeditor"/>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_9">
+          <attribute name="title">
+           <string>Misc</string>
+          </attribute>
+          <widget class="StatusLabel" name="statuslabel_26">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>521</width>
+             <height>581</height>
+            </rect>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+           <property name="rules" stdset="0">
+            <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:tool_data&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+           </property>
+          </widget>
          </widget>
         </widget>
        </item>
@@ -1169,7 +1216,7 @@ font: 14pt &quot;DejaVu Sans&quot;;
            <item row="1" column="0">
             <widget class="QGroupBox" name="gridGroupBox">
              <property name="title">
-              <string>Tool Offsets</string>
+              <string>Tool</string>
              </property>
              <layout class="QGridLayout" name="gridLayout_21">
               <item row="2" column="0">
@@ -1201,28 +1248,35 @@ Offset</string>
                 </property>
                 <layout class="QHBoxLayout" name="horizontalLayout">
                  <property name="leftMargin">
-                  <number>5</number>
+                  <number>1</number>
                  </property>
                  <property name="topMargin">
-                  <number>5</number>
+                  <number>1</number>
                  </property>
                  <property name="rightMargin">
-                  <number>5</number>
+                  <number>1</number>
                  </property>
                  <property name="bottomMargin">
-                  <number>5</number>
+                  <number>1</number>
                  </property>
                  <item>
                   <widget class="QLabel" name="label_11">
                    <property name="text">
-                    <string>Tool</string>
+                    <string>Loaded
+Tool</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
                    </property>
                   </widget>
                  </item>
                  <item>
                   <widget class="StatusLabel" name="toolInSpindle">
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
                    <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status: tool_in_spindle&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0])&quot;, &quot;name&quot;: &quot;Tool In Spindle&quot;}]</string>
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status: tool_in_spindle&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0])&quot;, &quot;name&quot;: &quot;Tool In Spindle&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status: tool_in_spindle&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'background-color: rgb(240,240,80)' if ch[0] == 0 else 'background-color: rgb(150,255,150)'&quot;, &quot;name&quot;: &quot;Background Color&quot;}]</string>
                    </property>
                   </widget>
                  </item>
@@ -1248,6 +1302,17 @@ Tool</string>
                 </property>
                 <property name="MDICommand" stdset="0">
                  <string>G43</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="MDIButton" name="mdibutton_23">
+                <property name="text">
+                 <string>Load
+Tool 1</string>
+                </property>
+                <property name="MDICommand" stdset="0">
+                 <string>T1 M6</string>
                 </property>
                </widget>
               </item>
@@ -1966,6 +2031,17 @@ Auto</string>
                 </property>
                </widget>
               </item>
+              <item row="7" column="3">
+               <widget class="ActionButton" name="actionbutton_23">
+                <property name="text">
+                 <string>Jog
+Incr</string>
+                </property>
+                <property name="actionName" stdset="0">
+                 <string>machine.jog-mode.incremental</string>
+                </property>
+               </widget>
+              </item>
              </layout>
             </widget>
            </item>
@@ -2216,7 +2292,7 @@ Center</string>
           <property name="bottomMargin">
            <number>5</number>
           </property>
-          <item row="0" column="9">
+          <item row="0" column="10">
            <widget class="ActionButton" name="actionbutton">
             <property name="text">
              <string>Abort</string>
@@ -2226,7 +2302,7 @@ Center</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="7">
+          <item row="0" column="8">
            <widget class="ActionButton" name="actionbutton_3">
             <property name="text">
              <string>Pause</string>
@@ -2236,7 +2312,7 @@ Center</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="8">
+          <item row="0" column="9">
            <widget class="ActionButton" name="actionbutton_2">
             <property name="text">
              <string>Resume</string>
@@ -2246,7 +2322,7 @@ Center</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="6">
+          <item row="0" column="7">
            <widget class="ActionButton" name="actionbutton_8">
             <property name="text">
              <string>Step</string>
@@ -2256,7 +2332,7 @@ Center</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="5">
+          <item row="0" column="6">
            <widget class="ActionButton" name="actionbutton_9">
             <property name="text">
              <string>Run</string>
@@ -2302,23 +2378,32 @@ Center</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="4">
-           <spacer name="horizontalSpacer">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
           <item row="0" column="0">
            <widget class="QPushButton" name="exitButton">
             <property name="text">
              <string>Exit</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="5">
+           <widget class="MDIButton" name="mdibutton_25">
+            <property name="text">
+             <string>Load
+T1</string>
+            </property>
+            <property name="MDICommand" stdset="0">
+             <string>T1 M6</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="4">
+           <widget class="MDIButton" name="mdibutton_24">
+            <property name="text">
+             <string>Go
+XYZ0</string>
+            </property>
+            <property name="MDICommand" stdset="0">
+             <string>G0 X0 Y0 Z0</string>
             </property>
            </widget>
           </item>
@@ -2370,6 +2455,11 @@ Center</string>
    <extends>QWidget</extends>
    <header>qtpyvcp.widgets.display_widgets.gcode_backplot.gcode_backplot</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>GcodeEditor</class>
+   <extends>QFrame</extends>
+   <header>qtpyvcp.widgets.input_widgets.gcode_editor</header>
   </customwidget>
   <customwidget>
    <class>FileSystemTable</class>
