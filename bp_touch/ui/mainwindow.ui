@@ -401,7 +401,7 @@ border: 5px solid rgb(136, 138, 133);
             <bool>true</bool>
            </property>
            <property name="rules" stdset="0">
-            <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:tool_data&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+            <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:tool_table&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
            </property>
           </widget>
          </widget>
@@ -798,7 +798,7 @@ font: 14pt &quot;DejaVu Sans&quot;;
                     <set>Qt::AlignCenter</set>
                    </property>
                    <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:axis?rel&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.3f}'.format(ch[0][2])&quot;, &quot;name&quot;: &quot;Relative Position&quot;}]</string>
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:rel?string&amp;axis=z&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Relative Position&quot;}]</string>
                    </property>
                   </widget>
                  </item>
@@ -808,7 +808,7 @@ font: 14pt &quot;DejaVu Sans&quot;;
                     <set>Qt::AlignCenter</set>
                    </property>
                    <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:axis?rel&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.3f}'.format(ch[0][0])&quot;, &quot;name&quot;: &quot;Relative Position&quot;}]</string>
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:rel?string&amp;axis=x&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Relative Position&quot;}]</string>
                    </property>
                   </widget>
                  </item>
@@ -818,7 +818,7 @@ font: 14pt &quot;DejaVu Sans&quot;;
                     <set>Qt::AlignCenter</set>
                    </property>
                    <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:axis?rel&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.3f}'.format(ch[0][1])&quot;, &quot;name&quot;: &quot;Relative Position&quot;}]</string>
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:rel?string&amp;axis=y&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Relative Position&quot;}]</string>
                    </property>
                   </widget>
                  </item>
@@ -835,7 +835,7 @@ font: 14pt &quot;DejaVu Sans&quot;;
                     <set>Qt::AlignCenter</set>
                    </property>
                    <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:axis?abs&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.3f}'.format(ch[0][1])&quot;, &quot;name&quot;: &quot;Absolute Position&quot;}]</string>
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:abs?string&amp;axis=y&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Absolute Position&quot;}]</string>
                    </property>
                   </widget>
                  </item>
@@ -845,7 +845,7 @@ font: 14pt &quot;DejaVu Sans&quot;;
                     <set>Qt::AlignCenter</set>
                    </property>
                    <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:axis?abs&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.3f}'.format(ch[0][2])&quot;, &quot;name&quot;: &quot;Absolute Position&quot;}]</string>
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:abs?string&amp;axis=z&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Absolute Position&quot;}]</string>
                    </property>
                   </widget>
                  </item>
@@ -855,7 +855,7 @@ font: 14pt &quot;DejaVu Sans&quot;;
                     <set>Qt::AlignCenter</set>
                    </property>
                    <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:axis?abs&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.3f}'.format(ch[0][0])&quot;, &quot;name&quot;: &quot;Absolute Position&quot;}]</string>
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:abs?string&amp;axis=x&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Absolute Position&quot;}]</string>
                    </property>
                   </widget>
                  </item>
@@ -885,7 +885,7 @@ font: 14pt &quot;DejaVu Sans&quot;;
                     <set>Qt::AlignCenter</set>
                    </property>
                    <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint[0].homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Z Axis *' if ch[0] else 'Z Axis'&quot;, &quot;name&quot;: &quot;Homed&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint[0].homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'background-color:rgb(150,255,150)' if ch[0] else 'background-color:rgb(240,240,80)'&quot;, &quot;name&quot;: &quot;Background Color&quot;}]</string>
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.2.homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Z Axis *' if ch[0] else 'Z Axis'&quot;, &quot;name&quot;: &quot;Homed&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.2.homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'background-color:rgb(150,255,150)' if ch[0] else 'background-color:rgb(240,240,80)'&quot;, &quot;name&quot;: &quot;Background Color&quot;}]</string>
                    </property>
                   </widget>
                  </item>
@@ -925,7 +925,7 @@ font: 14pt &quot;DejaVu Sans&quot;;
                     <set>Qt::AlignCenter</set>
                    </property>
                    <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint[0].homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Y Axis *' if ch[0] else 'Y Axis'&quot;, &quot;name&quot;: &quot;Homed&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint[0].homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'background-color:rgb(150,255,150)' if ch[0] else 'background-color:rgb(240,240,80)'&quot;, &quot;name&quot;: &quot;Background Color&quot;}]</string>
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.1.homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Y Axis *' if ch[0] else 'Y Axis'&quot;, &quot;name&quot;: &quot;Homed&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.1.homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'background-color:rgb(150,255,150)' if ch[0] else 'background-color:rgb(240,240,80)'&quot;, &quot;name&quot;: &quot;Background Color&quot;}]</string>
                    </property>
                   </widget>
                  </item>
@@ -941,7 +941,7 @@ font: 14pt &quot;DejaVu Sans&quot;;
                     </font>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">background-color:rgb(240,240,80)</string>
+                    <string notr="true">background-color: rgb(150, 255, 150);</string>
                    </property>
                    <property name="frameShape">
                     <enum>QFrame::Box</enum>
@@ -957,7 +957,7 @@ font: 14pt &quot;DejaVu Sans&quot;;
                     <set>Qt::AlignCenter</set>
                    </property>
                    <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint[0].homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'X Axis *' if ch[0] else 'X Axis'&quot;, &quot;name&quot;: &quot;Homed&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint[0].homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'background-color:rgb(150,255,150)' if ch[0] else 'background-color:rgb(240,240,80)'&quot;, &quot;name&quot;: &quot;Background Color&quot;}]</string>
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'X Axis *' if ch[0] else 'X Axis'&quot;, &quot;name&quot;: &quot;Homed&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'background-color:rgb(150,255,150)' if ch[0] else 'background-color:rgb(240,240,80)'&quot;, &quot;name&quot;: &quot;Background Color&quot;}]</string>
                    </property>
                   </widget>
                  </item>
@@ -970,7 +970,7 @@ font: 14pt &quot;DejaVu Sans&quot;;
                     <set>Qt::AlignCenter</set>
                    </property>
                    <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status: tool_in_spindle&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Tool {}'.format(ch[0])&quot;, &quot;name&quot;: &quot;Tool in Spindle&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status: tool_in_spindle&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'background-color: rgb(240,240,80)' if ch[0] == 0 else 'background-color: rgb(150,255,150)'&quot;, &quot;name&quot;: &quot;Background Color&quot;}]</string>
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:tool_in_spindle&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Tool {}'.format(ch[0])&quot;, &quot;name&quot;: &quot;Tool in Spindle&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:tool_in_spindle&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'background-color: rgb(240,240,80)' if ch[0] == 0 else 'background-color: rgb(150,255,150)'&quot;, &quot;name&quot;: &quot;Background Color&quot;}]</string>
                    </property>
                   </widget>
                  </item>
@@ -996,7 +996,7 @@ font: 14pt &quot;DejaVu Sans&quot;;
                     <set>Qt::AlignCenter</set>
                    </property>
                    <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status: task_mode?text&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Mode&quot;}]</string>
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:task_mode?string&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Mode&quot;}]</string>
                    </property>
                   </widget>
                  </item>
@@ -1276,7 +1276,7 @@ Tool</string>
                     <set>Qt::AlignCenter</set>
                    </property>
                    <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status: tool_in_spindle&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0])&quot;, &quot;name&quot;: &quot;Tool In Spindle&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status: tool_in_spindle&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'background-color: rgb(240,240,80)' if ch[0] == 0 else 'background-color: rgb(150,255,150)'&quot;, &quot;name&quot;: &quot;Background Color&quot;}]</string>
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:tool_in_spindle&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0])&quot;, &quot;name&quot;: &quot;Tool In Spindle&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:tool_in_spindle&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'background-color: rgb(240,240,80)' if ch[0] == 0 else 'background-color: rgb(150,255,150)'&quot;, &quot;name&quot;: &quot;Background Color&quot;}]</string>
                    </property>
                   </widget>
                  </item>
@@ -1991,7 +1991,7 @@ Rev</string>
                     <set>Qt::AlignCenter</set>
                    </property>
                    <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:spindle[0].speed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.0f}'.format(ch[0])&quot;, &quot;name&quot;: &quot;Spindle Speed&quot;}]</string>
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:spindle.0.speed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.0f}'.format(ch[0])&quot;, &quot;name&quot;: &quot;Spindle Speed&quot;}]</string>
                    </property>
                   </widget>
                  </item>
@@ -2243,7 +2243,7 @@ Center</string>
                  <set>Qt::AlignCenter</set>
                 </property>
                 <property name="rules" stdset="0">
-                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:axis?rel&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'X {:.3f}'.format(ch[0][0])&quot;, &quot;name&quot;: &quot;Relative Position&quot;}]</string>
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:rel&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'X {:.3f}'.format(ch[0][0])&quot;, &quot;name&quot;: &quot;Relative Position&quot;}]</string>
                 </property>
                </widget>
               </item>
@@ -2253,7 +2253,7 @@ Center</string>
                  <set>Qt::AlignCenter</set>
                 </property>
                 <property name="rules" stdset="0">
-                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:axis?rel&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Y {:.3f}'.format(ch[0][1])&quot;, &quot;name&quot;: &quot;Relative Position&quot;}]</string>
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:rel&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Y {:.3f}'.format(ch[0][1])&quot;, &quot;name&quot;: &quot;Relative Position&quot;}]</string>
                 </property>
                </widget>
               </item>
@@ -2263,7 +2263,7 @@ Center</string>
                  <set>Qt::AlignCenter</set>
                 </property>
                 <property name="rules" stdset="0">
-                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:axis?rel&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Z {:.3f}'.format(ch[0][2])&quot;, &quot;name&quot;: &quot;Relative Position&quot;}]</string>
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;position:rel&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Z {:.3f}'.format(ch[0][2])&quot;, &quot;name&quot;: &quot;Relative Position&quot;}]</string>
                 </property>
                </widget>
               </item>
@@ -2358,7 +2358,7 @@ Center</string>
           <item row="0" column="3">
            <widget class="ActionButton" name="actionbutton_4">
             <property name="rules" stdset="0">
-             <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint[0].homed&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint[1].homed&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint[2].homed&quot;, &quot;trigger&quot;: false}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Homed' if ch[0] and ch[1] and ch[2] else 'Home\\nAll'&quot;, &quot;name&quot;: &quot;All Homed&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint[0].homed&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint[1].homed&quot;, &quot;trigger&quot;: false}, {&quot;url&quot;: &quot;status:joint[2].homed&quot;, &quot;trigger&quot;: false}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;\&quot;background-color:rgb(138, 226, 52)\&quot; if ch[0] and ch[1] and ch[2] else ''&quot;, &quot;name&quot;: &quot;Back Color&quot;}]</string>
+             <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Homed' if ch[0] else 'Home\\nAll'&quot;, &quot;name&quot;: &quot;All Homed&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;\&quot;background-color:rgb(138, 226, 52)\&quot; if ch[0] else ''&quot;, &quot;name&quot;: &quot;Back Color&quot;}]</string>
             </property>
             <property name="actionName" stdset="0">
              <string>machine.home.all</string>
@@ -2752,9 +2752,8 @@ XYZ0</string>
   </connection>
  </connections>
  <buttongroups>
+  <buttongroup name="toolOffsetGroup"/>
   <buttongroup name="mdiButtonGroup"/>
   <buttongroup name="offsetButtonGroup"/>
-  <buttongroup name="toolOffsetGroup"/>
-  <buttongroup name="probeButtonGroup"/>
  </buttongroups>
 </ui>
