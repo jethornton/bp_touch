@@ -391,17 +391,14 @@ border: 5px solid rgb(136, 138, 133);
           <widget class="StatusLabel" name="statuslabel_26">
            <property name="geometry">
             <rect>
-             <x>10</x>
-             <y>10</y>
-             <width>521</width>
-             <height>581</height>
+             <x>60</x>
+             <y>450</y>
+             <width>49</width>
+             <height>15</height>
             </rect>
            </property>
-           <property name="wordWrap">
-            <bool>true</bool>
-           </property>
            <property name="rules" stdset="0">
-            <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:tool_table&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
+            <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:task_mode&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0])&quot;, &quot;name&quot;: &quot;New Rule&quot;}]</string>
            </property>
           </widget>
          </widget>
@@ -2004,30 +2001,11 @@ Rev</string>
                  <string>Mode
 Manual</string>
                 </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:task_mode&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'background-color: rgb(138, 226, 52)' if ch[0] == 1 else ''&quot;, &quot;name&quot;: &quot;Background Color&quot;}]</string>
+                </property>
                 <property name="actionName" stdset="0">
                  <string>machine.mode.manual</string>
-                </property>
-               </widget>
-              </item>
-              <item row="6" column="4">
-               <widget class="ActionButton" name="actionbutton_21">
-                <property name="text">
-                 <string>Mode
-MDI</string>
-                </property>
-                <property name="actionName" stdset="0">
-                 <string>machine.mode.mdi</string>
-                </property>
-               </widget>
-              </item>
-              <item row="5" column="4">
-               <widget class="ActionButton" name="actionbutton_22">
-                <property name="text">
-                 <string>Mode
-Auto</string>
-                </property>
-                <property name="actionName" stdset="0">
-                 <string>machine.mode.auto</string>
                 </property>
                </widget>
               </item>
@@ -2039,6 +2017,34 @@ Incr</string>
                 </property>
                 <property name="actionName" stdset="0">
                  <string>machine.jog-mode.incremental</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="4">
+               <widget class="ActionButton" name="actionbutton_21">
+                <property name="text">
+                 <string>Mode
+MDI</string>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:task_mode&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'background-color: rgb(138, 226, 52)' if ch[0] == 3 else ''&quot;, &quot;name&quot;: &quot;Background Color&quot;}]</string>
+                </property>
+                <property name="actionName" stdset="0">
+                 <string>machine.mode.mdi</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="4">
+               <widget class="ActionButton" name="actionbutton_22">
+                <property name="text">
+                 <string>Mode
+Auto</string>
+                </property>
+                <property name="rules" stdset="0">
+                 <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:task_mode&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'background-color: rgb(138, 226, 52)' if ch[0] == 2 else ''&quot;, &quot;name&quot;: &quot;Backcolor&quot;}]</string>
+                </property>
+                <property name="actionName" stdset="0">
+                 <string>machine.mode.auto</string>
                 </property>
                </widget>
               </item>
@@ -2752,8 +2758,8 @@ XYZ0</string>
   </connection>
  </connections>
  <buttongroups>
-  <buttongroup name="toolOffsetGroup"/>
   <buttongroup name="mdiButtonGroup"/>
   <buttongroup name="offsetButtonGroup"/>
+  <buttongroup name="toolOffsetGroup"/>
  </buttongroups>
 </ui>
